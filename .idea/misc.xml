@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springcloud" />
+    <file type="web" url="file://$PROJECT_DIR$/springcloudgoods" />
+    <file type="web" url="file://$PROJECT_DIR$/springcloudintegral" />
+    <file type="web" url="file://$PROJECT_DIR$/springcloudstock" />
+    <file type="web" url="file://$PROJECT_DIR$/springcloudzuul" />
+    <file type="web" url="file://$PROJECT_DIR$/testrestful" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudgoods/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudstock/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudintegral/pom.xml" />
+        <option value="$PROJECT_DIR$/testrestful/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudzuul/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

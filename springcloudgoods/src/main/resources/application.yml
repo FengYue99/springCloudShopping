@@ -1,0 +1,53 @@
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.1.13.164:8050/eureka/
+#框架整合相关配置
+spring:
+  #该服务在注册中心中的名字
+  application:
+    name: goods-server
+  datasource:
+    username: java38
+    password: 123456
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+  #关于freemarker配置
+  freemarker:
+    #关闭缓存
+    cache: false
+    #后缀
+    suffix: .html
+    #防止使用freemarker模板的时候页面把数字格式化为三位一组的数字
+    settings:
+      number_format: 0.##
+#集成mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zl.pojo
+  configuration:
+    jdbc-type-for-null: null
+#配置负载均衡,集群
+integral-server:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#开启feign对hystrix的支持
+feign:
+  hystrix:
+    enabled: true
+#超时配置
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+# 熔断器超时时间，默认：1000/毫秒
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000

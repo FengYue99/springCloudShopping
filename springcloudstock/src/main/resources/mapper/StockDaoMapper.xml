@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+namespace:必须是对应接口的全路径
+-->
+<mapper namespace="com.zl.dao.StockDao">
+    <select id="queryStock" parameterType="int" resultType="int">
+        select stock_number from SC_STOCK where GOOD_ID = ${goodId}
+    </select>
+    <update id="updateStock" parameterType="map">
+        update SC_STOCK set STOCK_NUMBER = STOCK_NUMBER - ${stockNumber} where GOOD_ID = ${goodId}
+    </update>
+</mapper>

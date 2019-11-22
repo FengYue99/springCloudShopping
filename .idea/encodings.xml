@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/springcloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloudgoods" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloudintegral" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloudstock" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloudzuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testrestful" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,33 @@
+server:
+  port: 8084
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.1.13.164:8050/eureka/
+#框架整合相关配置
+spring:
+  #该服务在注册中心中的名字
+  application:
+    name: stock-server
+  datasource:
+    username: java38
+    password: 123456
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+  #关于freemarker配置
+  freemarker:
+    #关闭缓存
+    cache: false
+    #后缀
+    suffix: .html
+    #防止使用freemarker模板的时候页面把数字格式化为三位一组的数字
+    settings:
+      number_format: 0.##
+#集成mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zl.pojo
+  configuration:
+    jdbc-type-for-null: null
+
+

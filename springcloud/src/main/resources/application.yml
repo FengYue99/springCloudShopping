@@ -1,0 +1,16 @@
+server:
+  port: 8050
+#eureka注册中心相关配置
+eureka:
+  instance:
+    #主机名字
+    hostname: 10.1.13.164
+  #客户端
+  client:
+    #该注册中心不对外提供服务
+    registerWithEureka: false
+    #是否需要拉取服务，false适合eureka单机
+    fetchRegistry: false
+    serviceUrl:
+      #其他服务注册到注册中心的地址
+      defaultZone: http://10.1.13.164:8050/eureka/

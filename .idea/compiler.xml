@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="testrestful" />
         <module name="springcloudintegral" />
-        <module name="springcloudzuul" />
         <module name="springcloudgoods" />
         <module name="springcloudstock" />
         <module name="springcloud" />
+        <module name="springcloudzuul" />
         <module name="springCloudShopping" />
       </profile>
     </annotationProcessing>

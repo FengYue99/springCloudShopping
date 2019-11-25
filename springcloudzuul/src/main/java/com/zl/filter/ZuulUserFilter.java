@@ -6,6 +6,7 @@ import com.netflix.zuul.exception.ZuulException;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author fy
@@ -40,7 +41,14 @@ public class ZuulUserFilter extends ZuulFilter {
         HttpServletRequest request = rc.getRequest();
         //当前请求的路径
         String path = request.getServletPath();
-        return false;
+        System.out.println("拦截到的请求："+path);
+        HttpSession session = request.getSession();
+        String userName = (String) session.getAttribute("userName");
+        System.out.println(userName+"....");
+        if ("/gateway/good/login".equals(path) || userName != null){
+            return false;
+        }
+        return true;
     }
 
     /**
